@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="form_preventive_check" model="ir.ui.view">
+        <field name="name">checklist</field>
+        <field name="model">preventive.checklist</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="html_field"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_preventive_check" model="ir.actions.act_window">
+        <field name="name">preventive</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">preventive.checklist</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                <!-- Add Text Here -->
+            </p>
+            <p>
+                <!-- More details about what a user can do with this object will be OK -->
+            </p>
+        </field>
+    </record>
+
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem id="UNIQUE_ID_categ_check" name="Maintenance Check List" parent="industry_fsm.fsm_menu_settings"
+              action="action_preventive_check" sequence="21"/>
+
+
+    <!-- Inherit Form View to Modify it -->
+    <record id="project_check_id" model="ir.ui.view">
+        <field name="name">project</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="new_field_id"/>
+            </xpath>
+
+        </field>
+    </record>
+
+
+    <!-- Inherit Form View to Modify it -->
+    <record id="repair_order_id" model="ir.ui.view">
+        <field name="name">repair</field>
+        <field name="model">repair.order</field>
+        <field name="inherit_id" ref="repair.view_repair_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="new_field_project_id"/>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="check List">
+                        <field name="name_center_point"/>
+                        <field name="cp_id"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>

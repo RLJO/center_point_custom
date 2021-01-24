@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+        <record id="view_make_invoice_inherit" model="ir.ui.view">
+            <field name="name">view.make.invoice.inherited</field>
+            <field name="model">repair.order.make_invoice</field>
+            <field name="inherit_id" ref="repair.view_make_invoice"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='make_invoices']" position="after">
+                    <button name="make_total_invoices" string="All In One" type="object" class="btn-primary"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

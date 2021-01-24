@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+        <template id="report_invoice_custom_report" inherit_id="account.report_invoice_document">
+            <xpath expr="//t/div/table/thead/tr/th[6]" position="after">
+                <th name="th_partner_project" class="text-left">
+                    <span>Partner Branch</span>
+                </th>
+            </xpath>
+            <xpath expr="//t/div/table/tbody/t/tr/t/td[6]" position="after">
+                <td colspan="99">
+                    <span t-field="line.partner_project"/>
+                </td>
+            </xpath>
+        </template>
+    </data>
+</odoo>
