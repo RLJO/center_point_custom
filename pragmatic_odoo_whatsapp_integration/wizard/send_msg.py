@@ -114,12 +114,12 @@ class SendWAMessageResPartner(models.TransientModel):
                 msg += "*Project:* " + rec.project_id.name
             if rec.name:
                 msg += "\n*Task name:* " + rec.name
-            # if rec.date_deadline:
-            #     msg += "\n*Deadline:* " + str(rec.date_deadline)
-            if rec.planned_date_begin:
-                msg += "\n*Planned Date Begin:* " + str(rec.planned_date_begin)
-            if rec.planned_date_end:
-                msg += "\n*Planned Date End:* " + str(rec.planned_date_end)
+            if rec.date_deadline:
+                msg += "\n*Deadline:* " + str(rec.date_deadline)
+            # if rec.planned_date_begin:
+            #     msg += "\n*Planned Date Begin:* " + str(rec.planned_date_begin)
+            # if rec.planned_date_end:
+            #     msg += "\n*Planned Date End:* " + str(rec.planned_date_end)
             if len(rec.description) > 11:
                 msg += "\n*Description:* " + rec.cleanhtml(rec.description)
         result['message'] = msg
