@@ -116,6 +116,7 @@ class SendWAMessageResPartner(models.TransientModel):
                 msg += "\n*Task name:* " + rec.name
             if rec.date_deadline:
                 msg += "\n*Deadline:* " + str(rec.date_deadline)
+
             # if rec.planned_date_begin:
             #     msg += "\n*Planned Date Begin:* " + str(rec.planned_date_begin)
             # if rec.planned_date_end:
