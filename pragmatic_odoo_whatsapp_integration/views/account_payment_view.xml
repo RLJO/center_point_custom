@@ -10,10 +10,7 @@
                     name="%(pragmatic_odoo_whatsapp_integration.send_whatsapp_msg_template_action)d"
                     class="fa fa-whatsapp"
                     string="Send WhatsApp Message"
-                groups="pragmatic_odoo_whatsapp_integration.account_payment_feature"
-
-
-                />
+                groups="pragmatic_odoo_whatsapp_integration.account_payment_feature"/>
             </xpath>
         </field>
     </record>
