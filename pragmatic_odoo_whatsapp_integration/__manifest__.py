@@ -1,5 +1,5 @@
 {
-    'name': 'Whatsapp Odoo All In One Integration lv',
+    'name': 'Whatsapp Odoo All In One Integration',
     'version': '14.0.1',
     'category': 'Connector',
     'author': 'Pragmatic TechSoft Pvt Ltd.',

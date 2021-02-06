@@ -1,4 +1,4 @@
- <!--<?xml version="1.0" encoding="utf-8"?>-->
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
 <!--    <record id="group_send_report_url_in_message" model="res.groups">-->
